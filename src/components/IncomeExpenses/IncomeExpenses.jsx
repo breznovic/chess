@@ -7,11 +7,11 @@ const IncomeExpenses = () => {
             <div className={classes.incExpContainer}>
                 <div>
                     <h4>Income</h4>
-                    <p id="money-plus" className={classes.moneyPlus}>+$0.00</p>
+                    <p className={classes.moneyPlus}>+$0.00</p>
                 </div>
                 <div>
                     <h4>Expense</h4>
-                    <p id="money-minus" className={classes.moneyMinus}>-$0.00</p>
+                    <p className={classes.moneyMinus}>-$0.00</p>
                 </div>
             </div>
         </div>
