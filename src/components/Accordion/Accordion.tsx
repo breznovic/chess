@@ -16,7 +16,7 @@ export function Accordion(props: PropsType) {
                 <AccordionBody/>
             </div>
         )
-    } else (props.collapsed === false)
+    } else
 
     { return (
             <div>
