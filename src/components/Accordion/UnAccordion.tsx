@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import AccordionTitle from './AccordionTitle'
 import AccordionBody from './AccordionBody'
 
@@ -10,12 +10,12 @@ type PropsType = {
 
 export function UnAccordion(props: PropsType) {
 
-    let collapsed = false
+    let [collapsed, setCollapsed] = useState(false)
 
     return (
         <div>
-            <AccordionTitle title={props.title}/><button>Toggle</button>
-            { !collapsed && <AccordionBody/> }
+            <AccordionTitle title={props.title}/><button onClick={() => { setCollapsed(!collapsed) }}>Toggle</button>
+            { collapsed && <AccordionBody/> }
         </div>
     )
 }
