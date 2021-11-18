@@ -2,23 +2,26 @@ import React from 'react'
 import classes from './App.module.css'
 import {Accordion} from './components/Accordion/Accordion'
 import {Rating} from "./components/Rating/Rating";
+import OnOff from "./components/OnOff/OnOff";
+import {UnAccordion} from "./components/Accordion/UnAccordion";
 
 function App() {
     return (
         <div className={classes.app}>
-            <PageTitle title={'This is App Component'}/>
-            <PageTitle title={'Users'}/>
-            Article 1
-            <Rating value={3}/>
-            <Accordion title={'Menu'} collapsed={true}/>
-            <Accordion title={'Users List'} collapsed={false}/>
-            Article 2
-            <Rating value={0}/>
-            <Rating value={1}/>
-            <Rating value={2}/>
-            <Rating value={3}/>
-            <Rating value={4}/>
-            <Rating value={5}/>
+            {/*<Accordion title={'Menu'} collapsed={true}/>*/}
+            {/*<Accordion title={'Users List'} collapsed={false}/>*/}
+            {/*<Rating value={0} />*/}
+            {/*<Rating value={1} />*/}
+            {/*<Rating value={2} />*/}
+            {/*<Rating value={3} />*/}
+            {/*<Rating value={4} />*/}
+            {/*<Rating value={5} />*/}
+            <OnOff />
+            <OnOff />
+            <OnOff />
+            <UnAccordion title={'Here I am'} />
+            <UnAccordion title={'Me too'} />
+            <Rating value={1} />
         </div>
     )
 }
