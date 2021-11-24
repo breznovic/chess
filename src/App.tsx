@@ -1,27 +1,21 @@
-import React from 'react'
+import React, {useState} from 'react'
 import classes from './App.module.css'
-import {Accordion} from './components/Accordion/Accordion'
-import {Rating} from "./components/Rating/Rating";
+import {Rating, RatingValueType} from "./components/Rating/Rating";
 import OnOff from "./components/OnOff/OnOff";
-import {UnAccordion} from "./components/Accordion/UnAccordion";
+import {Accordion} from "./components/Accordion/Accordion";
+import UnOnOff from "./components/OnOff/UnOnOff";
 
 function App() {
+
+    let [ratingValue, setRatingValue] = useState<RatingValueType>(4)
+    let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false)
+    let [switchOn, setSwitchOn] = useState<boolean>(false)
+
     return (
         <div className={classes.app}>
-            {/*<Accordion title={'Menu'} collapsed={true}/>*/}
-            {/*<Accordion title={'Users List'} collapsed={false}/>*/}
-            {/*<Rating value={0} />*/}
-            {/*<Rating value={1} />*/}
-            {/*<Rating value={2} />*/}
-            {/*<Rating value={3} />*/}
-            {/*<Rating value={4} />*/}
-            {/*<Rating value={5} />*/}
-            <OnOff />
-            <OnOff />
-            <OnOff />
-            <UnAccordion title={'Here I am'} />
-            <UnAccordion title={'Me too'} />
-            <Rating value={1} />
+            <UnOnOff onChange={setSwitchOn} /> {switchOn.toString()}
+            <OnOff on={switchOn} onChange={(on) => { setSwitchOn(on) }} />
+            <Accordion title={'Tatatata'} collapsed={accordionCollapsed} onChange={() => {setAccordionCollapsed(!accordionCollapsed)} } />
         </div>
     )
 }
