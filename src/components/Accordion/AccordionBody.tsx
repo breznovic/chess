@@ -1,12 +1,18 @@
 import React from 'react'
+import {ItemType} from "./Accordion";
 
-function AccordionBody() {
+type PropsType = {
+    items: ItemType[]
+}
+
+function AccordionBody(props: PropsType) {
     return (
         <div>
             <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
+                {
+                props.items.map((i, index) => <li key={index}>{i.title}</li>)
+                }
+                <button>Click Me!</button>
             </ul>
         </div>
     )

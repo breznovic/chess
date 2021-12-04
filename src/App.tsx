@@ -4,6 +4,7 @@ import {Rating, RatingValueType} from "./components/Rating/Rating";
 import OnOff from "./components/OnOff/OnOff";
 import {Accordion} from "./components/Accordion/Accordion";
 import UnOnOff from "./components/OnOff/UnOnOff";
+import {Select} from "./components/Select/Select";
 
 function App() {
 
@@ -13,9 +14,17 @@ function App() {
 
     return (
         <div className={classes.app}>
-            <UnOnOff onChange={setSwitchOn} /> {switchOn.toString()}
-            <OnOff on={switchOn} onChange={(on) => { setSwitchOn(on) }} />
-            <Accordion title={'Tatatata'} collapsed={accordionCollapsed} onChange={() => {setAccordionCollapsed(!accordionCollapsed)} } />
+            <Select value={'Book'} onClick={value => alert('hey')} items={[{value: 'dog', title: 'beast'}]} />
+            <UnOnOff onChange={setSwitchOn}/> {switchOn.toString()}
+            <OnOff on={switchOn} onChange={(on) => {
+                setSwitchOn(on)
+            }}/>
+            <Accordion title={'Tatatatattt'}
+                       collapsed={accordionCollapsed}
+                       onChange={() => {
+                           setAccordionCollapsed(!accordionCollapsed)
+                       }}
+                       items={[{title:'cat', value: 'feline'}, {title:'dog', value: 'beast' }, {title:'bird', value: 'flying'}]}/>
         </div>
     )
 }

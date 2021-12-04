@@ -1,10 +1,16 @@
 import React from 'react'
 import AccordionBody from './AccordionBody'
 
+export type ItemType = {
+    title: string
+    value: string
+}
+
 type PropsType = {
     title: string
     collapsed: boolean
     onChange: () => void
+    items: ItemType[]
 }
 
 export type AccordionTitlePropsType = {
@@ -24,7 +30,7 @@ export function Accordion(props: PropsType) {
         <div>
             <AccordionTitle title={props.title}
                             onChange={props.onChange}/>
-            {!props.collapsed && <AccordionBody/>}
+            {!props.collapsed && <AccordionBody items={props.items}/>}
         </div>
     )
 }
