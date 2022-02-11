@@ -1,13 +1,12 @@
 import React from 'react'
-import classes from './App.module.css'
+import {Header} from "./components/Header";
+import {Content} from "./components/Content";
 
-function App() {
-
-    return (
-        <div className={classes.app}>
-
-        </div>
-    )
+export const App = () => {
+    return <div>
+        <Header/>
+        <Content/>
+    </div>
 }
 
-export default App
+
