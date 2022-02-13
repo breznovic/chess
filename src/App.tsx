@@ -1,12 +1,12 @@
 import React from 'react'
-import {Header} from "./components/Header";
-import {Content} from "./components/Content";
+import './App.css'
+import {UseStateHook} from "./hooks/UseStateHook";
 
 export const App = () => {
-    return <div>
-        <Header/>
-        <Content/>
+    <div>
+        <UseStateHook/>
     </div>
 }
+
 
 
