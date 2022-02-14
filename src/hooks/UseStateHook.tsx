@@ -30,7 +30,7 @@ export const UseStateHook = () => {
     }
 
     return <div className='app'>
-        <h1>Counter</h1>
+        <h2>Counter</h2>
         <div><h2>{count}</h2></div>
         <button className='btn btn-primary' onClick={inc}>Increment</button>
         <button className='btn btn-dark' onClick={dec}>Decrement</button>
