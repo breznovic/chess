@@ -1,8 +1,3 @@
-import React from 'react'
+export class Player {
 
-export const Player = () => {
-
-    return <div>
-
-    </div>
 }

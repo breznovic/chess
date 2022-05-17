@@ -14,10 +14,14 @@ export const App = () => {
     function restart() {
         const newBoard = new Board()
         newBoard.initCells()
+        newBoard.addFigures()
         setBoard(newBoard)
     }
 
     return <div className='app'>
-        <BoardComponent/>
+        <BoardComponent
+        board={board}
+        setBoard={setBoard}
+        />
     </div>
 }
